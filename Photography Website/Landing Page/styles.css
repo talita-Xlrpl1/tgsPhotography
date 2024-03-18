@@ -1,0 +1,898 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Memastikan lebar penuh */
+    height: 100%; /* Opsional, jika Anda juga ingin mengatur tinggi */
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/*  Header  Section */
+
+header nav {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.nav-brand, .nav-links, .youtube-button {
+    flex: 1; /* Memberikan setiap elemen fleksibilitas untuk menyesuaikan lebarnya */
+    display: flex;
+    justify-content: center; /* Menyesuaikan ini sesuai kebutuhan */
+}
+
+header nav .nav-brand {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin-left: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px
+}
+
+header nav .nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-links li {
+    padding: 0 10px; /* Reduces the padding to bring links closer */
+}
+
+header nav .nav-links a {
+    text-decoration: none;
+    color:#787282;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.nav-links li.active a {
+    color: #1A093E; /* White text */
+    padding: 10px 15px; /* Add some padding for visual appeal */
+    border-radius: 5px; /* Optional: rounds the corners */
+}
+
+
+header nav .youtube-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .youtube-button button {
+    background-color: white;
+    color: #3F41A6;
+    border: #3F41A6 solid 2px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* hero */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.hero-content {
+    width: 50%;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+.hero-content h1 {
+    font-size: 96px;
+    line-height: 120px;
+    color: #1A093E;
+}
+
+.hero-content p{
+    font-size: 18px;
+    line-height: 27px;
+    color: #1A093CCC;
+    margin-top: 15px;
+    margin-right: 100px;
+}
+
+.hero-images {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.hero-images img {
+    max-width: 680px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.hero-images-row {
+    display: flex;
+    width: 279px;
+    height: 250px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.center-crop {
+    object-fit: cover; /* Resize the image to cover the container */
+    object-position: center; /* Focus on the center of the image */
+    margin: 10px; /* Add some space around the images */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    display: inline-block; /* Ensures images are in line and margins apply */
+}
+
+.hero2 {
+    width: 279px; /* Define the width of the cropped area for hero2 */
+    height: 250px; /* Define the height of the cropped area for hero2 */
+}
+
+.hero3 {
+    width: 380px; /* Define the width of the cropped area for hero3 */
+    height: 250px; /* Define the height of the cropped area for hero3, making it smaller */
+}  
+
+.pages, .photography, .photoshoots {
+    padding: 50px 20px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #3F41A6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    width: 266px;
+    height: 80px;
+    text-align: center; 
+    line-height: 55px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+/* Pages */
+
+.pages-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.page-images {
+    display: flex;
+    align-items: flex-start;
+}
+
+.page1-stack img {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 18px;
+}
+
+.fl1, .fl2, .fl3, .fl4 {
+    object-fit: cover; /* Ensures the image covers the area of the container */
+}
+
+.fl1 {
+    width: 80px;
+    height: 77px;
+    object-position: top left;
+}
+
+.fl2 {
+    width: 180px;
+    height: 138px;
+    object-position: top right; /* Example: Top right for .fl2 */
+}
+
+.fl3 {
+    width: 180px;
+    height: 87px;
+    object-position: 50% 50%; /* Example: Bottom left for .fl3 */
+}
+
+.fl4 {
+    width: 80px;
+    height: 77px;
+    float: right;
+    object-position: bottom right; /* Explicitly center, equivalent to 'center' */
+}
+
+
+.page2 {
+    margin-left: 50px; 
+    width: 245px;
+    height: 459px;
+    border-radius: 20px;
+}
+
+.text-content {
+    margin-left: 120px; /* Adjust as needed for spacing between images and text */
+    flex-grow: 1;
+}
+
+.text-content h6 {
+    font-size: 20px;
+    color: #3F41A6;
+    line-height: 30px;
+}
+
+.text-content h2 {
+    font-size: 48px;
+    color: #1A093C;
+    margin-right: 5rem;
+    line-height: 60px;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #1A093CCC;
+    margin-top: 15px;
+    margin-right: 10em;
+    line-height: 27px;
+}
+
+
+
+/* Photography */
+
+.photography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.photography h2 {
+    font-size: 48px;
+    color: #1A093C;
+    margin-bottom: 60px;
+}
+
+.testimonials-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Allows momentum scrolling on iOS devices */
+    white-space: nowrap; /* Prevents wrapping of inline elements */
+    gap: 20px; /* Spacing between testimonials */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    display: inline-flex; /* Keeps the testimonials in line and allows for flexbox alignment */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px; /* Minimum width for each testimonial */
+    white-space: normal; /* Resets white-space for the content inside testimonials */
+    margin: 50px;
+    cursor: pointer;
+}
+
+.testimonial img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.testimonial h6 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #1A093C;
+}
+
+.testimonial p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #1A093C;
+}
+
+
+
+/* Photoshoots */
+
+.photoshoots {
+    margin-top: 250px;
+}
+
+.camera-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.camera-section {
+    flex: 1;
+}
+
+.box-outer, .box-inner {
+    /* Pastikan kedua elemen ini memiliki z-index yang lebih tinggi dibanding .camera-count */
+    position: relative; /* Jika belum ditetapkan */
+    z-index: 2; /* Misalnya, memberikan nilai z-index yang lebih tinggi */
+}
+
+.camera-content {
+    flex: 1;
+    padding-left: 20px; /* Spacing between camera-section and camera-content */
+    margin-left: 80px;
+    position: relative; /* Memungkinkan z-index untuk bekerja */
+    z-index: 1; /* Menetapkan z-index yang lebih rendah untuk menempatkannya di belakang */
+    width: 100%; /* Memastikan lebar penuh */
+}
+
+.camera-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #1A093C;
+    margin-right: 8rem;
+}
+
+.camera-content p {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    margin-right: 5rem;
+}
+
+.desc {
+    text-align: left;
+    margin-top: 20px;
+    margin-right: 180px;
+}
+
+.camera-count {
+    display: flex;
+    margin-top: 120px;
+    position: relative;
+    z-index: 0;
+
+}
+
+.camera-count div {
+    text-align: end; /* Center-align the text inside each div */
+}
+
+.camera-count h2 {
+    margin: 0; /* Remove margin from h2 to tighten up spacing */
+    color: #1A093C; /* Optional: Re-use the color for consistency */
+}
+
+.camera-count p {
+    margin: 0; /* Remove margin from p to tighten up spacing */
+    font-size: 16px; /* Adjust font size for the description */
+}
+
+.box {
+    padding: 10px;
+    position: relative;
+    margin-left: -70px; /* Asumsi ini untuk konteks yang lebih luas, bisa disesuaikan atau dihilangkan sesuai kebutuhan */
+}
+
+.box-outer {
+    background-color: #00000017;
+    position: relative;
+    height: 500px;
+    width: 700px; /* Width didefinisikan untuk demonstrasi */
+    border-radius: 10px;
+}
+
+.box-inner {
+    background-color: white;
+    width: 700px; /* Lebih lebar dari box-outer untuk menciptakan efek menonjol */
+    border-radius: 0 0 20px 0;;
+    box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 45px;
+    right: 0; /* Menempatkan box-inner agar sebagian menonjol dari sisi kanan box-outer */
+}
+
+
+.dots {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.dots span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dots span:nth-child(1) {
+    background-color: rgb(255, 59, 59); /* First dot red */
+}
+
+.dots span:nth-child(2) {
+    background-color: rgb(233, 233, 75); /* Second dot yellow */
+}
+
+.dots span:nth-child(3) {
+    background-color: rgb(32, 141, 32); /* Third dot green */
+}
+
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Allows for detailed placement */
+    gap: 5px;
+}
+
+.images-grid img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Positions camera1, spans 3 columns */
+.camera1 {
+    grid-column: span 3;
+    object-position: center;
+    width: 412px;
+    margin-left: -100px;
+    margin-top: 30px;
+}
+
+/* Positions camera2 and camera3 beside camera1 */
+.camera2, .camera3 {
+    grid-column: span 1;
+    object-position: top;
+    width: 152px;
+    margin-top: 30px;
+}
+
+.camera2 {
+    margin-left: -93px;
+}
+
+.camera3 {
+    margin-left: -2px;
+}
+
+/* Positions camera6 below camera2 and camera3, spanning 3 columns */
+.camera6 {
+    grid-column: 4 / span 3; /* Starts at the 4th column line, spanning 3 columns */
+    grid-row: 2; /* Now placed in the second row for correction */
+    width: 324px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: -95px;
+}
+
+/* Adjustments for camera4 and camera5 to align them next to camera6 */
+.camera4, .camera5 {
+    grid-column: span 1; /* Adjust if necessary to fit beside camera6 */
+    grid-row: 2; /* Positions camera4 and camera5 in the third row, below camera6 */
+    width: 152px;
+    object-position: center;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.camera4 {
+    margin-left: -12px;
+    margin-right: 10px;
+}
+
+.camera-count {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Floral */
+
+.floral-design {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.floral-design h2, .floral-design p, .floral-design a, .floral-design .next-button {
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.floral-design h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #1A093C;
+    text-align: left;
+}
+
+.floral-design p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #1A093CCC;
+    text-align: left;
+    margin-right: 350px;
+}
+
+.floral-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    width: 30%;
+    text-align: center; /* Menyelaraskan teks angka di tengah di bawah gambar */
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%; /* Membuat gambar memenuhi kontainer */
+    margin-bottom: 10px; /* Jarak antara gambar dan angka */
+}
+
+/* Menyesuaikan tinggi setiap gambar secara individual */
+.image-container:nth-child(1) img {
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+
+.image-container:nth-child(2) img {
+    height: 300px;
+    margin-left: 160px;
+    margin-top: -60px;
+    border-radius: 20px;
+}
+
+.image-container:nth-child(3) img {
+    height: 250px;
+    margin-left: 300px;
+    margin-top: -150px;
+    border-radius: 20px;
+}
+
+.floral-images h2 p {
+    display: inline; /* Membuat "/18" inline dengan angka */
+    text-align: center;
+    margin-left: 5px;
+}
+
+/* Penyesuaian untuk angka di bawah gambar pertama */
+.image-container:nth-child(1) h2 {
+    margin-left: 30px; /* Atur jarak spesifik untuk angka gambar pertama */
+}
+
+/* Penyesuaian untuk angka di bawah gambar kedua */
+.image-container:nth-child(2) h2 {
+    margin-left: 160px; /* Atur jarak spesifik untuk angka gambar kedua */
+}
+
+/* Penyesuaian untuk angka di bawah gambar ketiga */
+.image-container:nth-child(3) h2 {
+    margin-left: 300px; /* Atur jarak spesifik untuk angka gambar ketiga */
+}
+
+.button-container {
+    text-align: right; /* Menempatkan konten di sebelah kanan */
+    /* Pastikan kontainer ini memiliki lebar penuh dari elemen induknya agar efek text-align:right bekerja dengan baik */
+    width: 480px;
+    margin-left: 600px;
+}
+
+.next-button {
+    background-color: white;
+    border: #0000001A 2px solid;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    padding-left: 220px; /* Meningkatkan padding kiri untuk menghindari garis menimpa teks */
+}
+
+.next-button::before, .next-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+}
+
+.next-button::before {
+    left: 10px;
+    width: 80px; /* Panjang bagian pertama garis */
+    background-color: black; /* Warna bagian pertama garis */
+}
+
+.next-button::after {
+    left: 90px; /* Posisi awal bagian kedua garis, mengikuti bagian pertama */
+    width: 120px; /* Panjang bagian kedua garis, membuat keseluruhan garis lebih panjang */
+    background-color: rgba(0, 0, 0, 0.473); /* Warna bagian kedua garis */
+}
+
+
+
+/* Awesome-works */
+
+.awesome-works {
+    margin-top: 250px;
+}
+
+.awesome-works h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1A093C;
+}
+
+.awesome-works p {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000BF;
+}
+
+.awesome-works {
+    margin-top: 250px;
+}
+
+.awesome-works h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1A093C;
+    margin-left: 50px;
+}
+
+.awesome-works p {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000BF;
+    margin-left: 50px;
+}
+
+.works-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center; /* Penyesuaian untuk distribusi horizontal */
+}
+
+.works-images img {
+    width: 380px; /* Lebar tetap untuk gambar */
+    height: 402px; /* Tinggi tetap untuk gambar */
+    border-radius: 50px; /* Sudut gambar membulat */
+    object-fit: cover; /* Menjaga aspek rasio gambar */
+    margin: 10px; /* Menambahkan margin untuk membuat jarak antar gambar */
+}
+
+
+
+
+/* get-stared */
+
+.get-started {
+    display: flex; /* Mengaktifkan Flexbox */
+    align-items: center; /* Menyelaraskan item-item di tengah secara vertikal */
+    justify-content: space-between; /* Menjaga jarak antara teks/tombol dengan gambar */
+    padding: 20px; /* Memberikan padding di dalam box */
+    background-color: #431898; /* Warna latar belakang untuk box */
+    border-radius: 100px; /* Membuat sudut box membulat */
+    width: 1180px;
+    height: 600px;
+    margin-top: 250px;
+    margin-left: 58px;
+    margin-bottom: 150px;
+}
+
+.text-container {
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-direction: column; /* Menata item-item secara vertikal */
+}
+
+.get-started h2, .get-started p, .get-started .cta {
+    margin-bottom: 20px; /* Menambahkan jarak di bawah setiap elemen */
+    margin-left: 80px;
+}
+
+.get-started h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.get-started p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFFCC;
+}
+
+.get-started .cta {
+    width: 266px;
+    height: 80px;
+    top: 6835px;
+    left: 230px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.get-started img {
+    max-width: 40%; /* Menyesuaikan maksimal lebar gambar */
+    height: auto; /* Menyesuaikan tinggi gambar secara otomatis */
+    margin-right: -110px;
+    margin-bottom: 300px;
+}
+
+
+footer {
+    display: flex;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .footer {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-grow: 2; /* Adjusts the growth rate to keep links closer */
+}
+
+footer .footer li {
+    padding: 0 10px; /* Reduces the padding to bring links closer */
+}
+
+footer .footer a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#787282;
+}
+
+@media screen and (max-width: 768px) {
+    /* Atur ulang atau sesuaikan untuk responsivitas */
+    nav {
+        flex-direction: row; /* Menjaga semuanya dalam satu baris tetapi bisa diubah sesuai kebutuhan */
+    }
+
+    .nav-brand, .youtube-button, .nav-links {
+        flex: 1;
+        margin: 30px 130px; /* Mengurangi margin pada layar kecil */
+    }
+
+    .nav-links li:not(:last-child) {
+        margin-right: 10px; /* Mengurangi jarak antar link */
+    }
+
+    .hero {
+        flex-direction: row; /* Menumpuk konten vertikal pada layar kecil */
+        text-align: center; /* Memusatkan teks pada layar kecil */
+    }
+
+    .hero-content, .hero-images {
+        width: 100%; /* Mengizinkan konten mengisi seluruh lebar */
+    }
+
+    .hero-images {
+        margin-left: 300px;
+    }
+
+    .hero-content {
+        text-align: start;
+    }
+
+    .text-content p {
+        margin-right: 5rem;
+    }
+
+    .pages-container {
+        margin: 10rem;
+    }
+
+    .photography h2 {
+        margin-left: 60rem;
+        width: 100%;
+    }
+    
+    .testimonial-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin-left: 60rem;
+        gap: 5rem;
+    }
+
+    .testimonial {
+        margin: 10px 0; /* Tambahkan margin untuk membantu visualisasi */
+        width: 100%; /* Atau lebar spesifik untuk menyesuaikan isi */
+    }
+
+    .floral-design h2, p {
+        width: 150%;
+    }
+
+    .awesome-works h2 {
+        width: 200%;
+    }
+
+    .works-images { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 41rem;
+    }
+
+    .get-started p {
+        width: 60%;
+    }
+
+    footer {
+        width: 350%;
+    }
+
+}
